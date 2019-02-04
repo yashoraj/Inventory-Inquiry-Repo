@@ -42,8 +42,6 @@ public class Inventory_Inquiry {
 	};
 	public static String timestamp=new SimpleDateFormat("yyyy-MM-dd'_T_'HH_mm_ss").format(new Date());
 	public Inventory_Inquiry() {
-
-		int test = 0;
 	}
 	@Test(priority=1)	
 	public static void TC001_Verify_BasicSearch() throws Exception{
