@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="Test.Functions_II">
+        <methods>
+          <include name="TC004_SearchedProductDetailsForGLClassChemical"/>
+          <include name="TC007_SearchedProductDetailsForGLClassOther"/>
+          <include name="TC005_SearchedProductDetailsForGLClassFert"/>
+          <include name="TC008_VerifySearchedProductDetails"/>
+          <include name="reporting"/>
+          <include name="TC006_SearchedProductDetailsForGLClassSeed"/>
+        </methods>
+      </class> <!-- Test.Functions_II -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

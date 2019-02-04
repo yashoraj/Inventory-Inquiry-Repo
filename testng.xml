@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Inventory_Inquiry" configfailurepolicy="skip">
+  <test name="Basic and Advance Search">
+    <classes>
+      <class name="Test.Inventory_Inquiry"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
