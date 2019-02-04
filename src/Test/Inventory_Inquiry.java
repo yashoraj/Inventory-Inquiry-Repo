@@ -42,14 +42,11 @@ public class Inventory_Inquiry {
 	};
 	public static String timestamp=new SimpleDateFormat("yyyy-MM-dd'_T_'HH_mm_ss").format(new Date());
 	public Inventory_Inquiry() {
-		int y= 0;
-		int x=0;
 	}
 	@Test(priority=1)	
 	public static void TC001_Verify_BasicSearch() throws Exception{
 		
 		try {
-			int testcas1=0;
 		FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\OR.properties");
 		obj.load(objfile);
 	
@@ -165,8 +162,6 @@ public class Inventory_Inquiry {
 	@Test(priority=2)
 	public void TC002_Verify_Searched_Productdetails() throws Exception{
 		try {
-			
-			int d=0;
 			FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\OR.properties");
 			obj.load(objfile);
 		
@@ -499,7 +494,7 @@ public class Inventory_Inquiry {
 	@AfterTest
 	public static void reporting() throws IOException{
 		excelUtilities.finalExcel();
-		//driver.quit();
+		driver.quit();
 	}
 }
 
