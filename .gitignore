@@ -8,7 +8,8 @@ TestingEvidence/
 .metadata/*
 *.project
 
-.metadata/*
+.metadata/
 test-output/*
 test-output
 test-output/
+*.index
