@@ -164,6 +164,8 @@ public class Inventory_Inquiry {
 	@Test(priority=2)
 	public void TC002_Verify_Searched_Productdetails() throws Exception{
 		try {
+			
+			int d=0;
 			FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\OR.properties");
 			obj.load(objfile);
 		
