@@ -49,6 +49,7 @@ public class Inventory_Inquiry {
 	public static void TC001_Verify_BasicSearch() throws Exception{
 		
 		try {
+			int testcas1=0;
 		FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\OR.properties");
 		obj.load(objfile);
 	
