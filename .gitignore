@@ -6,3 +6,4 @@ TestingEvidence/
 +.metadata/*
 +.metadata/
 .metadata/*
+*.project
