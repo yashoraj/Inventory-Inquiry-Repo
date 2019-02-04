@@ -9,10 +9,7 @@ TestingEvidence/
 *.project
 
 .metadata/
-+.metadata/*
-+.metadata/
 test-output/*
 test-output
 test-output/
-.metadata/.lock
 *.index
