@@ -40,7 +40,7 @@ public static Object[][] bookData = {
 public static String timestamp=new SimpleDateFormat("yyyy-MM-dd'_T_'HH_mm_ss").format(new Date());
 public Functions_II () throws Exception{
 }
-@Test(priority=5)
+@Test(priority=1)
 public static void TC008_VerifySearchedProductDetails () throws Exception {
 try {
 
@@ -50,7 +50,7 @@ try {
 	FileInputStream objfile1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\pathset.properties");
 	objdata.load(objfile1);
 	//Step 1
-	 //   driver = browserslaunch.browsersChrome();
+	    driver = browserslaunch.browsersChrome();
 		excelUtilities excelDataread=new excelUtilities();
 		String excelpath=objdata.getProperty("MainDataSheet");
 		String sheetName=objdata.getProperty("globalsheet");
@@ -175,16 +175,14 @@ try {
 		highLightElement(driver.findElement(By.xpath(obj.getProperty("AdditionalDetails"))));
 		Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("TestingEvidence_Advance_SS")+"TC008_Step9,Step10"+".png");
 		//Step 11
-		driver.findElement(By.xpath(obj.getProperty("OnHand"))).click();
+		//driver.findElement(By.xpath(obj.getProperty("OnHand"))).click();
 		Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("TestingEvidence_Advance_SS")+"TC008_Step11"+".png");
 		
 		//Step 12
 		//Step 13 //Step 14 //Step 15
-		highLightElement(driver.findElement(By.xpath(obj.getProperty("SKU_ID_Value"))));
+		highLightElement(driver.findElement(By.xpath(obj.getProperty("SKU_3"))));
 		Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("TestingEvidence_Advance_SS")+"TC008_Step14,Step15"+".png");
-		driver.findElement(By.xpath(obj.getProperty("SKU_ID_Value"))).click();
-		
-		
+		driver.findElement(By.xpath(obj.getProperty("SKU_3"))).click();
 		//Step 16 //Step 17
 		SwitchToAnotherWindow (driver, 2);
 		highLightElement(driver.findElement(By.xpath(obj.getProperty("Div_Title"))));
@@ -204,22 +202,26 @@ try {
 		excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC008_To verify searched product details", "To verify searched product details functionality Worked fine", "Pass", timestamp, bookData);
 		//Control is now at the Home Page
 }
+catch (NoSuchElementException e) 
+{ 	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png");
+	excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC008_To verify searched product details", "Advance Search functionality failed as some Search Element was not found", "Fail", timestamp, bookData);
+}
 catch (IllegalArgumentException e) 
 {	
 	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp1()+".png");
 	excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC008_To verify searched product details", "To verify searched product details functionality failed because of illegal arument", "Fail", timestamp, bookData);
 }
 }
-@Test(priority=4)
+@Test(priority=2)
 public static void TC007_SearchedProductDetailsForGLClassOther() throws Exception {
-	
+	try {
 	FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\OR.properties");
 	obj.load(objfile);
 
 	FileInputStream objfile1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\pathset.properties");
 	objdata.load(objfile1);
 	//Step 1
-	  //  driver = browserslaunch.browsersChrome();
+	    //driver = browserslaunch.browsersChrome();
 		excelUtilities excelDataread=new excelUtilities();
 		String excelpath=objdata.getProperty("MainDataSheet");
 		String sheetName=objdata.getProperty("globalsheet");
@@ -373,15 +375,26 @@ public static void TC007_SearchedProductDetailsForGLClassOther() throws Exceptio
 				driver.findElement(By.linkText("Return To Search")).click();
 				excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC007_SearchedProductDetailsForGLClassOther", "To verify Searched Product Details For GLClass Other functionality Worked fine", "Pass", timestamp, bookData);
 }
+	catch (NoSuchElementException e) 
+	{ 	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png");
+		excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC007_SearchedProductDetailsForGLClassOther", "Advance Search functionality failed as some Search Element was not found", "Fail", timestamp, bookData);
+	}
+	catch (IllegalArgumentException e) 
+	{	
+		Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp1()+".png");
+		excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC007_SearchedProductDetailsForGLClassOther", "To verify searched product details for GL Class Other functionality failed because of illegal arument", "Fail", timestamp, bookData);
+	}
+	}
 @Test(priority=3)
 public static void TC006_SearchedProductDetailsForGLClassSeed() throws Exception {
+	try{
 	FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\OR.properties");
 	obj.load(objfile);
 
 	FileInputStream objfile1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\pathset.properties");
 	objdata.load(objfile1);
 	//Step 1
-	//    driver = browserslaunch.browsersChrome();
+	    //driver = browserslaunch.browsersChrome();
 		excelUtilities excelDataread=new excelUtilities();
 		String excelpath=objdata.getProperty("MainDataSheet");
 		String sheetName=objdata.getProperty("globalsheet");
@@ -487,7 +500,7 @@ public static void TC006_SearchedProductDetailsForGLClassSeed() throws Exception
 				highLightElement(driver.findElement(By.xpath(obj.getProperty("AdditionalDetails_Column"))));
 				Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("TestingEvidence_Advance_SS")+"TC006_Step9,10"+".png");
 				//Step 11
-				driver.findElement(By.xpath(obj.getProperty("OnHand"))).click();
+				//driver.findElement(By.xpath(obj.getProperty("UOM_column"))).click();
 				Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("TestingEvidence_Advance_SS")+"TC006_Step11"+".png");
 				//Step 13 and 14
 				WebElement MoreLink=driver.findElement(By.linkText("More"));
@@ -530,16 +543,27 @@ public static void TC006_SearchedProductDetailsForGLClassSeed() throws Exception
 				driver.findElement(By.linkText("Return To Search")).click();
 				excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC006_SearchedProductDetailsForGLClassSeed", "To verify Searched Product Details For GLClass Seed functionality Worked fine", "Pass", timestamp, bookData);
 }
-@Test(priority=2)
+	catch (NoSuchElementException e) 
+	{ 	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png");
+		excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC006_SearchedProductDetailsForGLClassSeed", "Advance Search functionality failed as some Search Element was not found", "Fail", timestamp, bookData);
+	}
+catch (IllegalArgumentException e) 
+{	
+	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp1()+".png");
+	excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC006_SearchedProductDetailsForGLClassSeed", "To verify searched product details for GL Class Seed functionality failed because of illegal arument", "Fail", timestamp, bookData);
+}
+}
+@Test(priority=4)
 
 public static void TC005_SearchedProductDetailsForGLClassFert() throws Exception {
+	try {
 	FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\OR.properties");
 	obj.load(objfile);
 
 	FileInputStream objfile1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\pathset.properties");
 	objdata.load(objfile1);
 	//Step 1
-	//    driver = browserslaunch.browsersChrome();
+	    //driver = browserslaunch.browsersChrome();
 		excelUtilities excelDataread=new excelUtilities();
 		String excelpath=objdata.getProperty("MainDataSheet");
 		String sheetName=objdata.getProperty("globalsheet");
@@ -689,15 +713,26 @@ public static void TC005_SearchedProductDetailsForGLClassFert() throws Exception
 				excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC005_SearchedProductDetailsForGLClassFert", "To verify Searched Product Details For GLClass Fert functionality Worked fine", "Pass", timestamp, bookData);
 
 }
-@Test(priority=1)
+	catch (NoSuchElementException e) 
+	{ 	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png");
+		excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC005_SearchedProductDetailsForGLClassFert", "Advance Search functionality failed as some Search Element was not found", "Fail", timestamp, bookData);
+	}
+	catch (IllegalArgumentException e) 
+	{	
+		Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp1()+".png");
+		excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC005_SearchedProductDetailsForGLClassFert", "To verify searched product details for GL Class Fert functionality failed because of illegal arument", "Fail", timestamp, bookData);
+	}
+	}
+@Test(priority=5)
 public static void TC004_SearchedProductDetailsForGLClassChemical() throws Exception {
+	try {
 	FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\OR.properties");
 	obj.load(objfile);
 
 	FileInputStream objfile1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\pathset.properties");
 	objdata.load(objfile1);
 	//Step 1
-	    driver = browserslaunch.browsersChrome();
+	    //driver = browserslaunch.browsersChrome();
 		excelUtilities excelDataread=new excelUtilities();
 		String excelpath=objdata.getProperty("MainDataSheet");
 		String sheetName=objdata.getProperty("globalsheet");
@@ -847,6 +882,16 @@ public static void TC004_SearchedProductDetailsForGLClassChemical() throws Excep
 				excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC004_SearchedProductDetailsForGLClassChemical", "To verify Searched Product Details For GLClass Chemical functionality Worked fine", "Pass", timestamp, bookData);
 				
 }
+	catch (NoSuchElementException e) 
+	{ 	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png");
+		excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC004_SearchedProductDetailsForGLClassChemical", "Advance Search functionality failed as some Search Element was not found", "Fail", timestamp, bookData);
+	}
+	catch (IllegalArgumentException e) 
+	{	
+		Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp1()+".png");
+		excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC004_SearchedProductDetailsForGLClassChemical", "To verify searched product details for GL Class Chemical functionality failed because of illegal arument", "Fail", timestamp, bookData);
+	}
+	}
 public static String timestamp1() {
     return new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
 }
