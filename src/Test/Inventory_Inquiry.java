@@ -1347,7 +1347,7 @@ public class Inventory_Inquiry {
 	@AfterTest
 	public static void reporting() throws IOException{
 		excelUtilities.finalExcel();
-		//driver.quit();
+		driver.quit();
 	}
 }
 
