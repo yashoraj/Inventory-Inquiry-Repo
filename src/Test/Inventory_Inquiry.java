@@ -243,10 +243,10 @@ public class Inventory_Inquiry {
 				excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC002_Verify_Searched_Productdetails", "Advance Search functionality Worked fine", "Pass", timestamp, bookData);
 				
 	}
-		catch (NoSuchElementException e) 
-		{ 	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("BasicsearchErrorSS")+timestamp()+".png");
-			excelUtilities.writeTest("InventoryInquiry", "Basic Search", "step_1", "Basic Search functionality failed as some Basic Search Element was not found", "Fail", timestamp, bookData);
-		}
+//		catch (NoSuchElementException e) 
+//		{ 	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("BasicsearchErrorSS")+timestamp()+".png");
+//			excelUtilities.writeTest("InventoryInquiry", "Basic Search", "step_1", "Basic Search functionality failed as some Basic Search Element was not found", "Fail", timestamp, bookData);
+//		}
 		catch (IllegalArgumentException e) 
 		{	
 			Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("BasicsearchErrorSS")+timestamp()+".png");

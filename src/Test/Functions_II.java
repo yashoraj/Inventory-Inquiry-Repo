@@ -40,7 +40,7 @@ public static Object[][] bookData = {
 public static String timestamp=new SimpleDateFormat("yyyy-MM-dd'_T_'HH_mm_ss").format(new Date());
 public Functions_II () throws Exception{
 }
-@Test(priority=1)
+@Test(priority=5)
 public static void TC008_VerifySearchedProductDetails () throws Exception {
 try {
 
@@ -50,7 +50,7 @@ try {
 	FileInputStream objfile1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\pathset.properties");
 	objdata.load(objfile1);
 	//Step 1
-	    driver = browserslaunch.browsersChrome();
+	 //   driver = browserslaunch.browsersChrome();
 		excelUtilities excelDataread=new excelUtilities();
 		String excelpath=objdata.getProperty("MainDataSheet");
 		String sheetName=objdata.getProperty("globalsheet");
@@ -210,7 +210,7 @@ catch (IllegalArgumentException e)
 	excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC008_To verify searched product details", "To verify searched product details functionality failed because of illegal arument", "Fail", timestamp, bookData);
 }
 }
-@Test(priority=2)
+@Test(priority=4)
 public static void TC007_SearchedProductDetailsForGLClassOther() throws Exception {
 	
 	FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\OR.properties");
@@ -219,7 +219,7 @@ public static void TC007_SearchedProductDetailsForGLClassOther() throws Exceptio
 	FileInputStream objfile1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\pathset.properties");
 	objdata.load(objfile1);
 	//Step 1
-	    driver = browserslaunch.browsersChrome();
+	  //  driver = browserslaunch.browsersChrome();
 		excelUtilities excelDataread=new excelUtilities();
 		String excelpath=objdata.getProperty("MainDataSheet");
 		String sheetName=objdata.getProperty("globalsheet");
@@ -381,7 +381,7 @@ public static void TC006_SearchedProductDetailsForGLClassSeed() throws Exception
 	FileInputStream objfile1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\pathset.properties");
 	objdata.load(objfile1);
 	//Step 1
-	    driver = browserslaunch.browsersChrome();
+	//    driver = browserslaunch.browsersChrome();
 		excelUtilities excelDataread=new excelUtilities();
 		String excelpath=objdata.getProperty("MainDataSheet");
 		String sheetName=objdata.getProperty("globalsheet");
@@ -530,7 +530,7 @@ public static void TC006_SearchedProductDetailsForGLClassSeed() throws Exception
 				driver.findElement(By.linkText("Return To Search")).click();
 				excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC006_SearchedProductDetailsForGLClassSeed", "To verify Searched Product Details For GLClass Seed functionality Worked fine", "Pass", timestamp, bookData);
 }
-@Test(priority=4)
+@Test(priority=2)
 
 public static void TC005_SearchedProductDetailsForGLClassFert() throws Exception {
 	FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\OR.properties");
@@ -539,7 +539,7 @@ public static void TC005_SearchedProductDetailsForGLClassFert() throws Exception
 	FileInputStream objfile1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\pathset.properties");
 	objdata.load(objfile1);
 	//Step 1
-	    driver = browserslaunch.browsersChrome();
+	//    driver = browserslaunch.browsersChrome();
 		excelUtilities excelDataread=new excelUtilities();
 		String excelpath=objdata.getProperty("MainDataSheet");
 		String sheetName=objdata.getProperty("globalsheet");
@@ -689,7 +689,7 @@ public static void TC005_SearchedProductDetailsForGLClassFert() throws Exception
 				excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC005_SearchedProductDetailsForGLClassFert", "To verify Searched Product Details For GLClass Fert functionality Worked fine", "Pass", timestamp, bookData);
 
 }
-@Test(priority=5)
+@Test(priority=1)
 public static void TC004_SearchedProductDetailsForGLClassChemical() throws Exception {
 	FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\OR.properties");
 	obj.load(objfile);
