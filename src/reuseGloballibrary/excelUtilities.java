@@ -35,13 +35,13 @@ public class excelUtilities {
 		try {
 			DataFormatter fmt = new DataFormatter();
 			FileInputStream file = new FileInputStream(new File(pathName));
-			System.out.println("in read data");
-			System.out.println(sheetName);
+//			System.out.println("in read data");
+//			System.out.println(sheetName);
 			HSSFWorkbook workbook;
 			
 		
 			workbook = new HSSFWorkbook(file);
-			System.out.println(workbook.getNumberOfSheets());
+//			System.out.println(workbook.getNumberOfSheets());
 			//HSSFSheet sheet = workbook.getSheetAt(2);
 
 			HSSFSheet sheet2 = workbook.getSheet(sheetName);
@@ -55,7 +55,7 @@ public class excelUtilities {
 				//for (int i = 0; i <=1; i++) {
 				//Update the value of cell
 				HSSFRow row = sheet2.getRow(i);
-				System.out.println(row.getLastCellNum());
+//				System.out.println(row.getLastCellNum());
 				for (int j = 0; j < row.getLastCellNum(); j++) {
 					cell=sheet2.getRow(i).getCell(j);
 					String cellValue=null;
@@ -70,7 +70,7 @@ public class excelUtilities {
 						cellValue="";
 					}
 					cellValue=fmt.formatCellValue(cell);
-					System.out.println(cellValue);
+//					System.out.println(cellValue);
 
 					dataArr[i][j]=cellValue;
 					//System.out.println((dataArr[i][j]).trim());
@@ -145,7 +145,7 @@ public class excelUtilities {
 		
 		excelUtilities wd = new excelUtilities();
 		HSSFSheet sheet=wd.createSheet(testone, bookDa);
-		System.out.println(sheet);
+//		System.out.println(sheet);
 		sheet.setDisplayGridlines(false);
 		//String timestamp1=new SimpleDateFormat("yyyy-MM-dd'_T_'HH_mm_ss").format(new Date());
 		
@@ -203,9 +203,9 @@ public class excelUtilities {
 		objData.load(objfile1); 
 
 		String excelFilePath = objData.getProperty("outputReportexcel");
-		System.out.println("in excel write final");
+//		System.out.println("in excel write final");
 		
-		System.out.println(excelFilePath);
+//		System.out.println(excelFilePath);
 	//	try (FileOutputStream outputStream = new FileOutputStream("D:\\538115_bkp\\Biswajit_backup\\Delivery_Projects\\Selenium\\Data_Sheet\\TestData_write.xls")) {
 //String[] timestamp1=new String[200];
           // final int counter=0;

@@ -46,12 +46,11 @@ public class Inventory_Inquiry {
 	@Test(priority=1)	
 	public static void TC001_Verify_BasicSearch() throws Exception{
 		try {
-			FileInputStream objfile = new FileInputStream(System.getProperty("D:\\Prakash-workspace\\InventoryInquiry\\src\\objectRepository\\OR.properties"));
+			FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\OR.properties");
 			obj.load(objfile);
-		
-			FileInputStream objfile1 = new FileInputStream(System.getProperty("D:\\Prakash-workspace\\InventoryInquiry\\src\\objectRepository\\pathset.properties"));
+			FileInputStream objfile1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\pathset.properties");
 			objdata.load(objfile1);
-		driver = browserslaunch.browsersChrome();
+			driver = browserslaunch.browsersChrome();
 			excelUtilities excelDataread=new excelUtilities();
 			String excelpath=objdata.getProperty("MainDataSheet");
 			String sheetName=objdata.getProperty("globalsheet");
@@ -161,10 +160,9 @@ public class Inventory_Inquiry {
 	@Test(priority=2)
 	public void TC002_Verify_Searched_Productdetails() throws Exception{
 		try {
-			FileInputStream objfile = new FileInputStream(System.getProperty("D:\\Prakash-workspace\\InventoryInquiry\\src\\objectRepository\\OR.properties"));
+			FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\OR.properties");
 			obj.load(objfile);
-		
-			FileInputStream objfile1 = new FileInputStream(System.getProperty("D:\\Prakash-workspace\\InventoryInquiry\\src\\objectRepository\\pathset.properties"));
+			FileInputStream objfile1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\pathset.properties");
 			objdata.load(objfile1);
 		//	driver = browserslaunch.browsersChrome();
 				excelUtilities excelDataread=new excelUtilities();
