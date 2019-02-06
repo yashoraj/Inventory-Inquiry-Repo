@@ -4,6 +4,7 @@
 #global ignore files / directory 
 TestingEvidence/
 *.project
+test-output/
 test-output/*
 *.index
 .project
