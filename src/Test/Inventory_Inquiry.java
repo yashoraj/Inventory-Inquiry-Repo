@@ -254,6 +254,7 @@ public class Inventory_Inquiry {
 	}
 	@Test(priority=3)
 	public void TC003_Verify_AdvanceSearch() throws Exception{
+		
 		FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\OR.properties");
 		obj.load(objfile);
 		FileInputStream objfile1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\objectRepository\\pathset.properties");
