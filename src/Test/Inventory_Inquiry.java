@@ -57,8 +57,8 @@ public class Inventory_Inquiry {
 			String[][] nexcelData=excelDataread.getdata(excelpath, sheetName);
 			//Step-2
 			//driver.get(nexcelData[1][0]);
-			String USERID=nexcelData[11][0];
-			String PSWD=nexcelData[11][1];
+			String USERID=nexcelData[13][0];
+			String PSWD=nexcelData[13][1];
 			String URL = "http://" + USERID + ":" + PSWD + "@" + "abcgydcrapp26:1399/";
 			driver.get(URL);
 			//Step-3
@@ -154,12 +154,14 @@ public class Inventory_Inquiry {
 		}
 		catch (NoSuchElementException e) 
 		{ 	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("BasicsearchErrorSS")+timestamp()+".png");
-		excelUtilities.writeTest("InventoryInquiry", "Basic Search", "step_1", "Basic Search functionality failed as some Basic Search Element was not found", "Fail", timestamp, bookData);
+			excelUtilities.writeTest("InventoryInquiry", "Basic Search", "step_1", "Basic Search functionality failed as some Basic Search Element was not found", "Fail", timestamp, bookData);
+			System.out.println("TC001 FAILED as Element was not found");
 		}
 		catch (IllegalArgumentException e) 
 		{	
 			Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("BasicsearchErrorSS")+timestamp()+".png");
 			excelUtilities.writeTest("InventoryInquiry", "Basic Search", "TC001_Verify_BasicSearch", "Basic Search functionality failed because of illegal arument", "Fail", timestamp, bookData);
+			System.out.println("TC001 FAILED because of Illegal argument");
 		}
 	}
 	@Test(priority=2)
@@ -247,12 +249,14 @@ public class Inventory_Inquiry {
 		}
 		catch (NoSuchElementException e) 
 		{ 	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("BasicsearchErrorSS")+timestamp()+".png");
-		excelUtilities.writeTest("InventoryInquiry", "Basic Search", "step_1", "Basic Search functionality failed as some Basic Search Element was not found", "Fail", timestamp, bookData);
+			excelUtilities.writeTest("InventoryInquiry", "Basic Search", "step_1", "Basic Search functionality failed as some Basic Search Element was not found", "Fail", timestamp, bookData);
+			System.out.println("TC002 FAILED as Element was not found");
 		}
 		catch (IllegalArgumentException e) 
 		{	
 			Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("BasicsearchErrorSS")+timestamp()+".png");
 			excelUtilities.writeTest("InventoryInquiry", "Basic Search", "TC002_Verify_Searched_Productdetails", "Basic Search functionality failed because of illegal arument", "Fail", timestamp, bookData);
+			System.out.println("TC002 FAILED because of Illegal argument");
 		}
 	}
 	@Test(priority=3)
@@ -462,12 +466,14 @@ public class Inventory_Inquiry {
 		}
 		catch (NoSuchElementException e) 
 		{   Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png") ; 
-		excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC003_Verify_AdvanceSearch", "Advance Search functionality failed as Element was not found", "Fail", timestamp, bookData);
+			excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC003_Verify_AdvanceSearch", "Advance Search functionality failed as Element was not found", "Fail", timestamp, bookData);
+			System.out.println("TC003 FAILED as Element was not found");
 		}
 		catch (IllegalArgumentException e) 
 		{	
 			Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png") ; 
 			excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC003_Verify_AdvanceSearch", "Advance Search functionality failed because of illegal argument", "Fail", timestamp, bookData);
+			System.out.println("TC003 FAILED because of Illegal argument");
 		}
 	}	
 	@Test(priority=4)
@@ -631,12 +637,14 @@ public class Inventory_Inquiry {
 		}
 		catch (NoSuchElementException e) 
 		{ 	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png");
-		excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC004_SearchedProductDetailsForGLClassChemical", "Advance Search functionality failed as some Search Element was not found", "Fail", timestamp, bookData);
+			excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC004_SearchedProductDetailsForGLClassChemical", "Advance Search functionality failed as some Search Element was not found", "Fail", timestamp, bookData);
+			System.out.println("TC004 FAILED as Element was not found");
 		}
 		catch (IllegalArgumentException e) 
 		{	
 			Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png");
 			excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC004_SearchedProductDetailsForGLClassChemical", "To verify searched product details for GL Class Chemical functionality failed because of illegal arument", "Fail", timestamp, bookData);
+			System.out.println("TC004 FAILED because of Illegal argument");
 		}
 	}
 	@Test(priority=5)
@@ -801,12 +809,14 @@ public class Inventory_Inquiry {
 		}
 		catch (NoSuchElementException e) 
 		{ 	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png");
-		excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC005_SearchedProductDetailsForGLClassFert", "Advance Search functionality failed as some Search Element was not found", "Fail", timestamp, bookData);
+			excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC005_SearchedProductDetailsForGLClassFert", "Advance Search functionality failed as some Search Element was not found", "Fail", timestamp, bookData);
+			System.out.println("TC005 FAILED as Element was not found");
 		}
 		catch (IllegalArgumentException e) 
 		{	
 			Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png");
 			excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC005_SearchedProductDetailsForGLClassFert", "To verify searched product details for GL Class Fert functionality failed because of illegal arument", "Fail", timestamp, bookData);
+			System.out.println("TC005 FAILED because of Illegal argument");
 		}
 	}
 	@Test(priority=6)
@@ -970,12 +980,14 @@ public class Inventory_Inquiry {
 		}
 		catch (NoSuchElementException e) 
 		{ 	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png");
-		excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC006_SearchedProductDetailsForGLClassSeed", "Advance Search functionality failed as some Search Element was not found", "Fail", timestamp, bookData);
+			excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC006_SearchedProductDetailsForGLClassSeed", "Advance Search functionality failed as some Search Element was not found", "Fail", timestamp, bookData);
+			System.out.println("TC006 FAILED as Element was not found");
 		}
 		catch (IllegalArgumentException e) 
 		{	
 			Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png");
 			excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC006_SearchedProductDetailsForGLClassSeed", "To verify searched product details for GL Class Seed functionality failed because of illegal arument", "Fail", timestamp, bookData);
+			System.out.println("TC006 FAILED because of Illegal argument");
 		}
 	}
 	@Test(priority=7)
@@ -1144,12 +1156,14 @@ public class Inventory_Inquiry {
 		}
 		catch (NoSuchElementException e) 
 		{ 	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png");
-		excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC007_SearchedProductDetailsForGLClassOther", "Advance Search functionality failed as some Search Element was not found", "Fail", timestamp, bookData);
+			excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC007_SearchedProductDetailsForGLClassOther", "Advance Search functionality failed as some Search Element was not found", "Fail", timestamp, bookData);
+			System.out.println("TC007 FAILED as Element was not found");
 		}
 		catch (IllegalArgumentException e) 
 		{	
 			Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png");
 			excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC007_SearchedProductDetailsForGLClassOther", "To verify searched product details for GL Class Other functionality failed because of illegal arument", "Fail", timestamp, bookData);
+			System.out.println("TC007 FAILED because of Illegal argument");
 		}
 	}
 	@Test(priority=8)
@@ -1317,12 +1331,14 @@ public class Inventory_Inquiry {
 		}
 		catch (NoSuchElementException e) 
 		{ 	Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png");
-		excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC008_To verify searched product details", "Advance Search functionality failed as some Search Element was not found", "Fail", timestamp, bookData);
+			excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC008_To verify searched product details", "Advance Search functionality failed as some Search Element was not found", "Fail", timestamp, bookData);
+			System.out.println("TC008 FAILED as Element was not found");
 		}
 		catch (IllegalArgumentException e) 
 		{	
 			Inventory_Inquiry.takeSnapShot(driver, objdata.getProperty("AdvancesearchErrorSS")+timestamp()+".png");
 			excelUtilities.writeTest("InventoryInquiry", "Advance Search", "TC008_To verify searched product details", "To verify searched product details functionality failed because of illegal arument", "Fail", timestamp, bookData);
+			System.out.println("TC008 FAILED because of Illegal argument");
 		}
 	}
 
