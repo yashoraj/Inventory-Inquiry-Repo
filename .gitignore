@@ -8,3 +8,9 @@ test-output/
 test-output/*
 *.index
 .project
+ErrorScreenshot/
+ErrorScreenshot/*
+TestingEvidence/
+TestingEvidence/*
+Report/
+Report/*
