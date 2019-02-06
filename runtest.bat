@@ -1,2 +1,2 @@
-java -cp D:\Yasho-workspace\InventoryInquiry\bin;D:\Yasho-workspace\InventoryInquiry\jars/* org.testng.TestNG D:\Yasho-workspace\InventoryInquiry\testng.xml
+java -cp D:\Prakash-workspace\InventoryInquiry\bin;D:\Prakash-workspace\InventoryInquiry\jars/* org.testng.TestNG D:\Prakash-workspace\InventoryInquiry\testng.xml
 
