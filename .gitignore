@@ -3,13 +3,6 @@
 
 #global ignore files / directory 
 TestingEvidence/
-+.metadata/*
-+.metadata/
-.metadata/*
 *.project
-
-.metadata/
-test-output/*
-test-output
 test-output/
 *.index
