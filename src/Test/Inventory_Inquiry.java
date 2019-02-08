@@ -30,6 +30,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 public class Inventory_Inquiry {
+	
 	private static final String True = null;
 	static browserslaunch lb=new browserslaunch();
 	static excelUtilities resWrite=new excelUtilities();
