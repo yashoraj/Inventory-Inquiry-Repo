@@ -16,3 +16,5 @@ Report/
 Report/*
 *.class
 *.class
+bin/Test/Inventory_Inquiry.class
+*.class
