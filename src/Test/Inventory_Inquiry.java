@@ -59,6 +59,7 @@ public class Inventory_Inquiry {
 			//driver.get(nexcelData[1][0]);
 			String USERID=nexcelData[11][0];
 			String PSWD=nexcelData[11][1];
+			
 			String URL = "http://" + USERID + ":" + PSWD + "@" + "abcgydcrapp26:1399/";
 			driver.get(URL);
 			//Step-3
